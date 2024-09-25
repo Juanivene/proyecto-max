@@ -1,0 +1,125 @@
+
+main {
+padding-top: 4.7rem;
+background: linear-gradient(
+    180deg,
+    rgba(33, 50, 148, 1) 0%,
+    rgba(12, 6, 113, 1) 29%,
+    rgba(2, 0, 36, 1) 71%
+  );
+color: #ffffff;  
+text-align: center;
+ 
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  h3{
+    padding-bottom: 1rem;
+  }
+  
+/* Estilos del formulario */
+form.formulario {
+    background-color: #01103b; /* Fondo ligeramente más claro que el fondo general */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding-right: 50px;
+  }
+  
+  /* Estilo para las etiquetas y los inputs */
+  form.formulario label {
+    display: block;
+    font-size: 0.9rem;
+    color: #ffffff; /* Texto blanco */
+    margin-bottom: 8px;
+  }
+  
+  form.formulario input {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b4466; /* Azul medio oscuro */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* Texto blanco dentro del input */
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  form.formulario input::placeholder {
+    color: #596786; /* Placeholder de color claro */
+  }
+  
+  form.formulario input:focus {
+    outline: 2px solid #4f5d8a; /* Borde claro al enfocar el input */
+  }
+  
+  /* Botón de envío */
+  form.formulario button {
+    width: 70%;
+    padding: 12px;
+    background-color: #4f5d8a; /* Color del botón ligeramente más claro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0.7rem;
+  }
+  
+  form.formulario button:hover {
+    background-color: #6473a5; /* Color del botón al pasar el cursor */
+  }
+ 
+
+  h3 a {
+    color: #a1b0d1;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+/* Ajustes generales para main en pantallas pequeñas */
+@media (max-width: 768px) {
+    main {
+        padding-top: calc(80px + 1rem);
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduce el tamaño de la fuente para caber mejor en pantallas pequeñas */
+        margin-bottom: 8px; /* Ajusta el margen inferior */
+    }
+
+    p {
+        font-size: 0.9rem; /* Reduce el tamaño del párrafo para pantallas pequeñas */
+        margin-bottom: 15px; /* Ajusta el margen inferior */
+    }
+
+    h3 {
+        font-size: 0.8rem; /* Reduce el tamaño del texto del centro de ayuda */
+    }
+
+    form.formulario {
+        padding: 40px; /* Ajuste del padding en formularios para pantallas más pequeñas */
+        margin: 20px;
+    }
+
+    form.formulario button {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto del botón */
+    }
+}

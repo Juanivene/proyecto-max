@@ -1,0 +1,72 @@
+@media (max-width: 768px) {
+  #lw_header {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    padding: 0.5rem; /* Reduce el padding */
+  }
+main{
+  position: relative;
+}
+  #link_inicio {
+    margin-left: 0; /* Sin margen izquierdo */
+    margin-bottom: 1rem; /* Añade espacio entre el logo y los enlaces */
+  }
+
+  .links_der {
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten */
+    justify-content: center; /* Centra los enlaces */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+
+  .links_der a {
+    font-size: 0.7rem; /* Reduce el tamaño de la fuente */
+    padding: 8px 16px; /* Ajusta el padding */
+    
+  }
+
+  
+}
+
+/* ====== Estilos Responsive para pantallas pequeñas (móviles) ====== */
+@media (max-width: 480px) {
+  #link_inicio img {
+    width: 90px; /* Reduce el tamaño del logo */
+  }
+
+  #link_inicio {
+    margin-bottom: 1rem; /* Espacio adicional debajo del logo */
+  }
+
+  .links_der a,
+  .link_suscribete_ahora {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+    padding: 5px 12px; /* Ajusta el padding */
+    margin-left: 2rem;
+  }
+}
+
+/*main*/
+/* ====== Estilos Responsive ====== */
+@media (max-width: 768px) {
+    #titulos_centro_pagina  {
+      top: 76%; /* Ajusta la posición vertical en pantallas pequeñas */
+      
+    }
+   
+  
+    #titulos_centro_pagina h2 {
+      
+      font-size: 2rem; /* Reduce el tamaño de la fuente */
+      margin-bottom: 1rem; /* Ajusta el margen */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #titulos_centro_pagina {
+      top: 78%; /* Ajusta aún más la posición vertical en móviles */
+    }
+  
+    #titulos_centro_pagina h2 {
+      font-size: 1rem; /* Reduce aún más el tamaño de la fuente */
+      margin-bottom: 10px; /* Ajusta el margen */
+    }
+  }

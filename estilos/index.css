@@ -1,0 +1,210 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#lw_header {
+  background-color: #000000b4;
+  display: flex; /* Usar flexbox */
+  align-items: center; /* Centrar verticalmente */
+  padding: 1rem;
+  position: fixed; /* Fija la barra de navegación */
+  top: 0; /* Coloca la barra en la parte superior */
+  left: 0; /* Alinea la barra a la izquierda */
+  width: 100%; /* Asegúrate de que ocupe todo el ancho */
+  z-index: 1000; /* Mantiene la barra por encima de otros elementos */
+}
+
+#link_inicio {
+  margin-left: 2rem;
+  margin-right: auto;
+}
+
+#link_inicio img {
+  width: 110px;
+}
+
+.links_der a,
+.link_suscribete_ahora {
+  text-decoration: none;
+  color: antiquewhite;
+  background-color: rgba(19, 51, 194, 0.863); /* Color de fondo oscuro */
+  border: 2px solid rgb(4, 31, 119); /* Borde azul */
+  padding: 10px 20px; /* Espacio interno */
+  border-radius: 5px; /* Esquinas redondeadas */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+  font-size: 0.8rem;
+  margin-right: 2rem;
+}
+
+.links_der a:hover,
+.link_suscribete_ahora:hover {
+  background-color: #041227; /* Color de fondo al pasar el ratón */
+  color: white; /* Color del texto al pasar el ratón */
+  transition: 0.3s;
+}
+
+#centro_pagina {
+  position: relative;
+  background-color: #010408;
+  & img {
+    width: 100%;
+    display: block;
+  }
+}
+#titulos_centro_pagina {
+  position: absolute; /* Posiciona sobre la imagen */
+  top: 68%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Ajusta la posición para centrar completamente */
+  z-index: 100; /* Asegúrate de que esté por encima de la imagen */
+  text-align: center; /* Centra el texto */
+  color: white; /* Cambia el color del texto para que sea visible sobre la imagen */
+}
+#titulos_centro_pagina h2 {
+  margin-bottom: 20px; /* Ajusta el valor según necesites */
+}
+
+
+#planes_pagina {
+  background: linear-gradient(
+    180deg,
+    rgba(33, 50, 148, 1) 0%,
+    rgba(12, 6, 113, 1) 29%,
+    rgba(2, 0, 36, 1) 71%
+  );
+  color: #ffff;
+  text-align: center;
+}
+#planes_pagina button {
+  background-color: rgba(19, 51, 194, 0.863); /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border: 2px solid #fff; /* Borde blanco */
+  padding: 10px 30px; /* Espacio interno */
+  border-radius: 5px; /* Esquinas redondeadas */
+  font-size: 1rem; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar */
+  margin: 1rem; /* Espacio entre botones */
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+#planes_pagina button:hover {
+  background-color: #041227; /* Color de fondo al pasar el ratón */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+#planes_pagina button:active {
+  transform: scale(0.95); /* Efecto de "presionado" */
+}
+#mostrar_planes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.plan {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Fondo blanco con un poco de transparencia */
+  border-radius: 8px; /* Bordes redondeados */
+  margin: 10px; /* Espacio entre tarjetas */
+  padding: 20px; /* Espacio interno */
+  text-align: center; /* Centrar texto */
+  flex: 1 1 100px; /* Ancho mínimo y flexible */
+}
+
+.plan h3 {
+  color: #213294; /* Color del título */
+}
+
+.plan p {
+  color: #555; /* Color de la descripción */
+  margin: 5px;
+}
+.elegir_plan {
+  display: inline-block; /* Para que tenga espacio como botón */
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Color del texto */
+  background-color: #2646e2; /* Color de fondo */
+  padding: 10px 20px; /* Espacio interno */
+  border-radius: 5px; /* Esquinas redondeadas */
+  margin-top: 10px; /* Espacio superior */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.elegir_plan:hover {
+  background-color: #041836; /* Color al pasar el ratón */
+}
+
+#estrenos_pagina {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(12, 6, 113, 1) 29%,
+    rgba(33, 50, 148, 1) 71%
+  );
+
+  text-align: center;
+  padding-top: 50px;
+  color: #ffff;
+  padding-bottom: 50px;
+  
+}
+.estrenos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Para que las tarjetas se ajusten a la pantalla */
+  gap: 20px; /* Espacio entre las tarjetas */
+  margin-bottom: 20px;
+}
+
+.estreno {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Fondo ligero para las tarjetas */
+  border-radius: 10px; /* Esquinas redondeadas */
+  padding: 10px;
+  width: 200px; /* Ancho fijo para las tarjetas */
+}
+
+.estreno img {
+  width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+  border-radius: 10px; /* Esquinas redondeadas de la imagen */
+}
+
+footer {
+  background-color: #05024b; /* Azul oscuro para mantener la temática */
+  color: #b3b3b3; /* Color claro para el texto */
+  padding: 20px 0; /* Espaciado superior e inferior */
+  text-align: center; /* Centrar el contenido */
+  /* Separación respecto al contenido superior */
+}
+
+footer div {
+  margin-bottom: 10px; /* Separación entre íconos y el texto */
+}
+
+footer a {
+  margin: 0 10px; /* Espaciado entre los íconos */
+  transition: transform 0.3s ease; /* Suave animación al pasar el ratón */
+}
+
+footer a:hover {
+  transform: scale(1.2); /* Aumenta el tamaño de los íconos al pasar el ratón */
+}
+
+footer p {
+  font-size: 0.9rem; /* Tamaño de texto un poco más pequeño */
+}

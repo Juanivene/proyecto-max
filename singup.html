@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://www.max.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./estilos/index.css">
+    <link rel="stylesheet" href="./estilos/responsive.css">
+    <link rel="stylesheet" href="./estilos/singup.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <header id="lw_header">
+        <div id="link_inicio">
+          <a href="index.html">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Max_logo.svg/2560px-Max_logo.svg.png"
+              alt="Logo"
+            />
+          </a>
+        </div>
+        <div class="links_der">
+          <a href="login.html">Ingresa</a>
+        
+        </div>
+      </header>
+    </nav>
+    <main>
+      <div id="encabezado_singup">
+        <h1>comenzar</h1>
+        <p>Ingresa tu dirección de correo electrónico para empezar.</p>
+      </div>
+
+      <form id="form-singup" class="formulario">
+        <!-- Campo de email -->
+        <label for="email">Correo electrónico:</label>
+        <input
+          type="email"
+          id="login_input-usuario"
+          placeholder="hola@ejemplo.com"
+          required
+        />
+        <br /><br />
+
+        <!-- Campo de contraseña -->
+        <label for="password">Contraseña:</label>
+        <input type="password" id="login_input-contraseña" required />
+        <br /><br />
+
+        <!-- Campo para repetir contraseña -->
+        <label for="confirm-password">Repetir contraseña:</label>
+        <input type="password" id="login_input-contraseña" required />
+        <br /><br />
+
+        <!-- Campo para número de teléfono -->
+        <label for="phone">Número de teléfono:</label>
+        <input type="tel" id="login_input_telefono" required />
+        <br /><br />
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Registrarse</button>
+      </form>
+      <h3>
+        ¿tienes dudas?
+        <a href="#">centro de ayuda</a>
+      </h3>
+    </main>
+    <footer>
+      <div>
+        <a href="https://www.instagram.com">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            alt="Instagram"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href="https://www.twitter.com">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
+            alt="Twitter"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href="https://www.github.com">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+            alt="GitHub"
+            width="24"
+            height="24"
+          />
+        </a>
+      </div>
+      <p style="color: #b3b3b3">
+        2024 Tu Empresa. Todos los derechos reservados &COPY;.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #lw_header {
+    background-color: #000000b4;
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centrar verticalmente */
+    padding: 1rem;
+    position: fixed; /* Fija la barra de navegación */
+    top: 0; /* Coloca la barra en la parte superior */
+    left: 0; /* Alinea la barra a la izquierda */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    z-index: 1000; /* Mantiene la barra por encima de otros elementos */
+  }
+  
+  #link_inicio {
+    margin-left: 2rem;
+    margin-right: auto;
+  }
+  
+  #link_inicio img {
+    width: 110px;
+  }
+  
+ #categorias
+   {
+    text-decoration: none;
+    color: antiquewhite;
+    background-color: rgba(19, 51, 194, 0.863); /* Color de fondo oscuro */
+    border: 2px solid rgb(4, 31, 119); /* Borde azul */
+    padding: 10px 20px; /* Espacio interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+    font-size: 0.8rem;
+    margin-right: 2rem;
+    
+  }
+  .links_der a img{
+        max-width: 1.5rem;
+        margin-right: 2rem;
+        
+    }
+   
+  
+  .links_der a:hover,
+  .link_suscribete_ahora:hover {
+    background-color: #041227; /* Color de fondo al pasar el ratón */
+    color: white; /* Color del texto al pasar el ratón */
+    transition: 0.3s;
+  }
