@@ -4,28 +4,224 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.max.com/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./estilos/home.css" />
   </head>
   <body>
     <nav>
       <header id="lw_header">
         <div id="link_inicio">
-          <a href="#">
+          <a href="home.html">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Max_logo.svg/2560px-Max_logo.svg.png"
               alt="Logo"
             />
           </a>
         </div>
+
+        <div id="links_centro">
+          <a href="#cat_humor">Humor</a>
+          <a href="#cat_terror">Terror</a>
+          <a href="#cat_clasicos">Clásicos</a>
+          <a href="#cat_nuevo">Nuevo</a>
+        </div>
+
         <div class="links_der">
-          <a href="l#" id="admin"
-            ><img
-              src="https://e7.pngegg.com/pngimages/510/734/png-clipart-computer-icons-person-silhouette-silhouette-animals-logo.png"
-              alt="admin"
-          /></a>
-          <a href="#" id="categorias">categorias </a>
+          <div class="buscador">
+            <input type="text" placeholder="Buscar..." id="search-input" />
+            <button id="buscar" aria-label="Buscar">
+              <img
+                src="https://w7.pngwing.com/pngs/321/177/png-transparent-computer-icons-magnifier-magnifying-glass-magnifying-glass-text-share-icon-magnifier-thumbnail.png"
+                alt="lupa"
+              />
+            </button>
+          </div>
+          <div class="admin_logout">
+            <a href="admin.html" id="admin">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png"
+                alt="user"
+              />
+            </a>
+            <a href="index.html"
+              ><img
+                src="https://w7.pngwing.com/pngs/49/357/png-transparent-logging-out-log-off-logout.png"
+                alt="cerrar sesion"
+            /></a>
+          </div>
         </div>
       </header>
     </nav>
+    <main>
+      <section id="imagen_destacada">
+        <img
+          src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2024/09/20/17268273276833.png"
+          alt="pinguino-portada"
+          class="destacada"
+          id="destacada1"
+        />
+        <div class="navegacion_destacada">
+          <h3>
+            Tras la muerte de Carmine Falcone, Oz intenta legitimarse en el
+            inframundo criminal de Ciudad Gótica.
+          </h3>
+          <a href="#">Ir a pelicula</a>
+        </div>
+      </section>
+      <section id="cat_recomendaciones" class="categorias">
+        <h2>Recomendaciones para ti</h2>
+        <div class="carousel-container">
+          <button class="prev">&#10094;</button>
+          <div class="carousel">
+            <img
+              src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/f1c6ef16-40b2-4ef5-89ed-547decd9e620/ab07ada28a2f658d6eb8c8459e10278fca0ae78b.jpg?host=wbd-images.prod-vod.h264.io&partner=beamcom&w=320"
+              alt="godzilla"
+            />
+            <img
+              src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/bf432903-3aea-47b8-b2dd-312a843140eb/87da1579-4627-11ef-96ad-02805d6a02df?host=wbd-images.prod-vod.h264.io&partner=beamcom&w=320"
+              alt="ghostbusters"
+            />
+            <img
+              src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/3df7a4bb-6253-44ba-8cc5-c917622ba810/5048f911-5239-4a5e-96d6-47f63bfa200f?host=wbd-images.prod-vod.h264.io&partner=beamcom&w=320"
+              alt="furiosa"
+            />
+            <img
+              src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/f0a4f239-0b57-47e2-a39a-54fb96925e61/f24df231-2fc1-4c61-a41c-ed70e8c96a00?host=wbd-images.prod-vod.h264.io&partner=beamcom&w=320"
+              alt="duna"
+            />
+            <img
+              src="https://es.web.img3.acsta.net/medias/nmedia/18/72/41/74/20198901.jpg"
+              alt="origen"
+            />
+          </div>
+          <button class="next">&#10095;</button>
+        </div>
+      </section>
+
+      <section id="cat_humor" class="categorias">
+        <h2>Humor del bueno</h2>
+        <div class="carousel-container">
+          <button class="prev">&#10094;</button>
+          <div class="carousel">
+            <img
+              src="https://pics.filmaffinity.com/Sin_malos_rollos-531581992-large.jpg"
+              alt="hazme el favor"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTduI31Muz0o4sPW2cdjF9Wp3uSFb15DPfhVg&s"
+              alt="ataque de las arañas"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX1IrYNS9F4rGC1v-SQVtmUKdA6LiBgorOMA&s"
+              alt="bum bum bruno"
+            />
+            <img
+              src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/f0a4f239-0b57-47e2-a39a-54fb96925e61/f24df231-2fc1-4c61-a41c-ed70e8c96a00?host=wbd-images.prod-vod.h264.io&partner=beamcom&w=320"
+              alt="duna"
+            />
+            <img
+              src="https://es.web.img3.acsta.net/medias/nmedia/18/72/41/74/20198901.jpg"
+              alt="origen"
+            />
+          </div>
+          <button class="next">&#10095;</button>
+        </div>
+      </section>
+      <section id="cat_terror" class="categorias">
+        <h2>Terror psicologico</h2>
+        <div class="carousel-container">
+          <button class="prev">&#10094;</button>
+          <div class="carousel">
+            <img
+              src="https://pics.filmaffinity.com/Sin_malos_rollos-531581992-large.jpg"
+              alt="hazme el favor"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTduI31Muz0o4sPW2cdjF9Wp3uSFb15DPfhVg&s"
+              alt="ataque de las arañas"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX1IrYNS9F4rGC1v-SQVtmUKdA6LiBgorOMA&s"
+              alt="bum bum bruno"
+            />
+            <img
+              src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/f0a4f239-0b57-47e2-a39a-54fb96925e61/f24df231-2fc1-4c61-a41c-ed70e8c96a00?host=wbd-images.prod-vod.h264.io&partner=beamcom&w=320"
+              alt="duna"
+            />
+            <img
+              src="https://es.web.img3.acsta.net/medias/nmedia/18/72/41/74/20198901.jpg"
+              alt="origen"
+            />
+          </div>
+          <button class="next">&#10095;</button>
+        </div>
+      </section>
+      <section id="cat_clasicos" class="categorias">
+        <h2>Clasicos de max</h2>
+        <div class="carousel-container">
+          <button class="prev">&#10094;</button>
+          <div class="carousel">
+            <img
+              src="https://pics.filmaffinity.com/Sin_malos_rollos-531581992-large.jpg"
+              alt="hazme el favor"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTduI31Muz0o4sPW2cdjF9Wp3uSFb15DPfhVg&s"
+              alt="ataque de las arañas"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX1IrYNS9F4rGC1v-SQVtmUKdA6LiBgorOMA&s"
+              alt="bum bum bruno"
+            />
+            <img
+              src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/f0a4f239-0b57-47e2-a39a-54fb96925e61/f24df231-2fc1-4c61-a41c-ed70e8c96a00?host=wbd-images.prod-vod.h264.io&partner=beamcom&w=320"
+              alt="duna"
+            />
+            <img
+              src="https://es.web.img3.acsta.net/medias/nmedia/18/72/41/74/20198901.jpg"
+              alt="origen"
+            />
+          </div>
+          <button class="next">&#10095;</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a href="https://www.instagram.com">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            alt="Instagram"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href="https://www.twitter.com">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
+            alt="Twitter"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href="https://www.github.com">
+          <img
+            src="https://logowik.com/content/uploads/images/github-colored9940.logowik.com.webp"
+            alt="GitHub"
+            width="24"
+            height="24"
+          />
+        </a>
+      </div>
+      <p style="color: #b3b3b3">
+        2024 juanni. Todos los derechos reservados &COPY;.
+      </p>
+    </footer>
+
+   
   </body>
 </html>

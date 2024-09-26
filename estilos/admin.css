@@ -1,0 +1,162 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#lw_header {
+  background-color: #000000b4;
+  display: flex; /* Usar flexbox */
+  align-items: center; /* Centrar verticalmente */
+  padding: 1rem;
+  position: fixed; /* Fija la barra de navegación */
+
+  width: 100%; /* Asegúrate de que ocupe todo el ancho */
+  z-index: 1000; /* Mantiene la barra por encima de otros elementos */
+}
+
+#link_inicio {
+  margin-left: 2rem;
+  margin-right: auto;
+  
+}
+
+#link_inicio img {
+  width: 110px;
+}
+.links_der a img {
+  width: 30px;
+  margin-right: 1rem;
+  padding-right: 0px;
+}
+#links_centro {
+  flex: 1; /* Permite que el contenedor de los enlaces ocupe el espacio central */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente los enlaces */
+  gap: 10px;
+}
+
+#links_centro a {
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.25s ease;
+}
+#links_centro a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.buscador {
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+}
+
+#search-input {
+  border: 1px solid #ddd; /* Bordes del input */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-right: 0px; /* Espacio entre el input y el botón */
+  font-size: 16px; /* Tamaño de fuente */
+  padding-right: 10px;
+}
+
+#buscar {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+#buscar img {
+  margin-right: -40px;
+  width: 24px; /* Tamaño del ícono */
+  height: 24px; /* Tamaño del ícono */
+}
+
+#buscar:hover img {
+  filter: brightness(0.8); /* Oscurecer el ícono al pasar el mouse */
+}
+.admin_logout {
+  padding-left: 7.7rem;
+}
+
+main {
+  padding-top: 7rem;
+  background: linear-gradient(
+    180deg,
+    rgb(2, 2, 2) 21%,
+    rgb(9, 7, 71) 53%,
+    rgb(11, 23, 88) 71%
+  );
+
+  & h1 {
+    text-align: center;
+    color: #ffffff;
+  }
+}
+#formulario_agregar {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #66687c;
+  border-radius: 8px;
+  background-color: #041647;
+  margin-bottom: 1rem;
+}
+h2{
+  text-align: center;
+  color: #d6c6c6;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #8f8a8a;
+}
+
+input[type="text"],
+input[type="url"],
+select {
+  width: 100%;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0359b4;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #054181;
+}
+
+.tabla_peliculas {
+  max-width: 100%;
+  margin-top: 7rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  background-color: #131627;
+  color: white;
+}

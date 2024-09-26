@@ -14,6 +14,7 @@
   left: 0; /* Alinea la barra a la izquierda */
   width: 100%; /* Asegúrate de que ocupe todo el ancho */
   z-index: 1000; /* Mantiene la barra por encima de otros elementos */
+  
 }
 
 #link_inicio {
@@ -40,8 +41,8 @@
 
 .links_der a:hover,
 .link_suscribete_ahora:hover {
-  background-color: #041227; /* Color de fondo al pasar el ratón */
-  color: white; /* Color del texto al pasar el ratón */
+  background-color: #041227; 
+  color: white; 
   transition: 0.3s;
 }
 
@@ -145,12 +146,11 @@
 }
 
 #estrenos_pagina {
-  background: rgb(2, 0, 36);
   background: linear-gradient(
     180deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(12, 6, 113, 1) 29%,
-    rgba(33, 50, 148, 1) 71%
+    rgb(2, 2, 2) 21%,
+    rgb(9, 7, 71) 53%,
+    rgb(11, 23, 88) 71%
   );
 
   text-align: center;
@@ -185,7 +185,7 @@
 }
 
 footer {
-  background-color: #05024b; /* Azul oscuro para mantener la temática */
+  background-color: #05064e; /* Azul oscuro para mantener la temática */
   color: #b3b3b3; /* Color claro para el texto */
   padding: 20px 0; /* Espaciado superior e inferior */
   text-align: center; /* Centrar el contenido */
