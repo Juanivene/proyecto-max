@@ -1,3 +1,4 @@
+import { estaEditado, obtenerPeliculasLs } from "../utils.js";
 import {
   validateDescripcion,
   validateFoto,
@@ -5,7 +6,8 @@ import {
   validateTitulo,
   validateVideo,
 } from "../validators.js";
-import { agregarPelicula } from "./abm.js";
+import { agregarPelicula, cargarTabla, editarPelicula } from "./abm.js";
+cargarTabla();
 
 const $formAgregarPelicula = document.getElementById("form_agregar_pelicula");
 const $inputTitulo = document.getElementById("titulo");
@@ -52,16 +54,54 @@ $formAgregarPelicula.addEventListener("submit", (e) => {
     !validateVideo($inputTrailer)
   ) {
     alert("revisa los campos");
-  }
+  } else {
+    if (estaEditado()) {
+      editarPelicula(
+        titulo,
+        genero,
+        descripcion,
+        fotoCaratula,
+        fotoPortada,
+        trailer
+      );
+    } else {
+      agregarPelicula(
+        titulo,
+        genero,
+        descripcion,
+        fotoCaratula,
+        fotoPortada,
+        trailer
+      );
+    }
 
-  agregarPelicula(
-    titulo,
-    genero,
-    descripcion,
-    fotoCaratula,
-    fotoPortada,
-    trailer
-  );
-  $formAgregarPelicula.reset();
-  alert("Pelicula creada exitosamente")
+    $formAgregarPelicula.reset();
+
+    $inputTitulo.classList.remove("is-valid", "is-invalid");
+    $inputGenero.classList.remove("is-valid", "is-invalid");
+    $inputDescripcion.classList.remove("is-valid", "is-invalid");
+    $inputFotoCaratula.classList.remove("is-valid", "is-invalid");
+    $inputFotoPortada.classList.remove("is-valid", "is-invalid");
+    $inputTrailer.classList.remove("is-valid", "is-invalid");
+
+    cargarTabla();
+
+    let mensaje;
+    if (estaEditado() === true) {
+      mensaje = `${titulo} se ha editado correctamente`;
+      console.log;
+    } else {
+      mensaje = `${titulo} se ha cargado correctamente`;
+    }
+
+    swal.fire({
+      title: "Exito",
+      text: mensaje,
+      icon: "success",
+      showConfirmButton: true,
+      confirmButtonText: "ok",
+      showCancelButton: false,
+    });
+  }
+  //muestro la tabla
 });

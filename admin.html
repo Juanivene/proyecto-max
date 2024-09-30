@@ -30,7 +30,6 @@
         </div>
 
         <div class="links_der">
-         
           <div class="admin_logout">
             <a href="admin.html" id="admin">
               <img
@@ -51,6 +50,11 @@
       <h1>Panel de administracion</h1>
       <section id="formulario_agregar">
         <h2>Agregar Película/Serie</h2>
+        <div id="alert-pelicula-editando" class="alert alert-warning d-none">
+          Estas editando la pelicula:
+          <span id="nombre-pelicula-editando"></span>
+        </div>
+
         <form id="form_agregar_pelicula">
           <fieldset class="mb-2">
             <label for="titulo">Título:</label>
@@ -63,7 +67,13 @@
 
           <fieldset class="mb-2">
             <label for="genero">Género:</label>
-            <input type="text" id="genero" class="form-control" />
+            <select id="genero" class="form-control">
+              <option value="" disabled selected>Seleccionar género</option>
+              <option value="recomendaciones">Recomendaciones</option>
+              <option value="humor">Humor</option>
+              <option value="terror">Terror</option>
+              <option value="clasicos">Clasicos</option>
+            </select>
 
             <div class="invalid-feedback">
               <span class="badge text-bg-danger">El genero no es valido</span>
@@ -110,26 +120,55 @@
           <button type="submit">Agregar</button>
         </form>
       </section>
-      <section class="tabla_peliculas">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>id</th>
-              <th>Caratula</th>
-              <th>Titulo</th>
-              <th>Tipo</th>
-              <th>Categoria</th>
-              <th>Portada</th>
-              <th>trailer</th>
-              <th>descripcion</th>
-              <th>publicada</th>
-              <th>acciones</th>
-            </tr>
-          </thead>
-          <tbody id="tbody-contactos"></tbody>
-        </table>
-      </section>
+      <table id="tabla-carga" class="table table-dark table-striped-columns">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Caratula</th>
+            <th scope="col">Portada</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Trailer</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-peliculas"></tbody>
+      </table>
     </main>
+    <footer>
+      <div>
+        <a href="https://www.instagram.com">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            alt="Instagram"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href="https://www.twitter.com">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
+            alt="Twitter"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href="https://www.github.com">
+          <img
+            src="https://logowik.com/content/uploads/images/github-colored9940.logowik.com.webp"
+            alt="GitHub"
+            width="24"
+            height="24"
+          />
+        </a>
+      </div>
+      <p style="color: #b3b3b3">
+        2024 juanni. Todos los derechos reservados &COPY;.
+      </p>
+    </footer>
+
     <script type="module" src="./js/admin/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
   </body>
 </html>
