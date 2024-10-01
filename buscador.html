@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./estilos/peli.css" />
+    <link rel="stylesheet" href="./estilos/buscador.css" />
   </head>
   <body>
     <nav>
@@ -19,25 +19,17 @@
         </div>
 
         <div class="links_der">
-          <div class="buscador">
-            <a href="buscador.html" id="buscar" aria-label="Buscar">
-              <img
-                src="https://images.cdn.prd.api.discomax.com/2023%2F4%2F14%2F142d5e2b-0c8d-4886-8617-f9f58acfb4b8.png"
-                alt="lupa"
-              />
-            </a>
-          </div>
           <div class="admin_logout">
             <a href="admin.html" id="admin">
               <img
-                id="admin-img"
+                id="img-admin"
                 src="https://static.vecteezy.com/system/resources/thumbnails/019/879/186/small_2x/user-icon-on-transparent-background-free-png.png"
                 alt="user"
               />
             </a>
-            <a href="index.html"
+            <a href="index.html" id="logout"
               ><img
-                id="logout-img"
+                id="img-logout"
                 src="https://www.freeiconspng.com/thumbs/sign-out-icon/sign-out-logout-icon-0.png"
                 alt="cerrar sesion"
             /></a>
@@ -45,7 +37,26 @@
         </div>
       </header>
     </nav>
-    <main id="conteiner"></main>
+    <main>
+      <!-- Sección de búsqueda -->
+      <section id="busqueda">
+        <form id="form-busqueda" t>
+          <input
+            type="text"
+            id="input-busqueda"
+            placeholder="Busca una película por su nombre"
+            aria-label="Buscar película"
+          />
+          <button type="submit" id="botonBusqueda">Buscar</button>
+        </form>
+      </section>
+
+      <!-- Sección de resultados -->
+      <section id="resultados">
+        <h2>Películas Disponibles</h2>
+        <div id="conteiner-peliculas" class="conteiner"></div>
+      </section>
+    </main>
     <footer>
       <div>
         <a href="https://www.instagram.com/juanivenezianor/">
@@ -77,6 +88,6 @@
         2024 juanni. Todos los derechos reservados &COPY;.
       </p>
     </footer>
-    <script type="module" src="./js/pelicula/pelicula.js"></script>
+    <script type="module" src="./js/buscador/buscador.js"></script>
   </body>
 </html>

@@ -112,7 +112,8 @@ export const validateFoto = (campo) => {
     return false;
   }
   //que sea foto
-  const regex =/https?:\/\/.*\.(?:png|jpg|jpeg|gif)/
+  const regex =
+    /https?:\/\/.*\.(jpg|jpeg|png|gif|bmp|webp|svg)(\?.*)?(?=.*(url=.*\.(jpg|jpeg|png|gif|bmp|webp|svg)))?/;
 
   if (!regex.test(campo.value)) {
     campo.classList.add("is-invalid");
@@ -140,7 +141,7 @@ export const validateVideo = (campo) => {
     return false;
   }
   //que sea video
-  const regex =/^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$/
+  const regex = /^[a-zA-Z0-9_-]{11}$/;
 
   if (!regex.test(campo.value)) {
     campo.classList.add("is-invalid");
@@ -205,7 +206,7 @@ export const validateDescripcion = (campo) => {
   if (!campo || !campo.value.trim()) {
     campo.classList.add("is-invalid");
     campo.classList.remove("is-valid");
-    
+
     return false;
   }
 
@@ -213,7 +214,7 @@ export const validateDescripcion = (campo) => {
   if (campo.value.trim().length < 10) {
     campo.classList.add("is-invalid");
     campo.classList.remove("is-valid");
-    
+
     return false;
   }
   campo.classList.remove("is-invalid");

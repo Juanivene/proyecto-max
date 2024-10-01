@@ -77,16 +77,33 @@ const cargarFilaTabla = (pelicula, indice) => {
   //botones
   const $tdBotones = document.createElement("td");
 
+  const $btnNoDestacar = document.createElement("button");
   const $btnDestacar = document.createElement("button");
   const $btnEditar = document.createElement("button");
   const $btnEliminar = document.createElement("button");
+  $btnNoDestacar.classList.add(
+    "btn",
+    "btn-sm",
+    "btn-info",
+    "mb-1",
+    "btn-no-destacar"
+  );
   $btnDestacar.classList.add("btn", "btn-sm", "btn-info", "mb-1");
   $btnEditar.classList.add("btn", "btn-sm", "btn-warning", "mb-1");
   $btnEliminar.classList.add("btn", "btn-sm", "btn-danger");
+  $btnNoDestacar.textContent = "No destacar";
   $btnDestacar.textContent = "Destacar";
   $btnEditar.textContent = "Editar";
   $btnEliminar.textContent = "Eliminar";
-  $tdBotones.appendChild($btnDestacar);
+
+  const idEnSs = sessionStorage.getItem("idPelicula");
+
+  if (pelicula.id === idEnSs) {
+    $tdBotones.appendChild($btnNoDestacar);
+  } else {
+    $tdBotones.appendChild($btnDestacar);
+  }
+
   $tdBotones.appendChild($btnEditar);
   $tdBotones.appendChild($btnEliminar);
   $tr.appendChild($tdBotones);
@@ -100,8 +117,16 @@ const cargarFilaTabla = (pelicula, indice) => {
   $btnEditar.onclick = () => {
     prepararEdicionPelicula(pelicula);
   };
+  const idActualDestacado = sessionStorage.getItem("idPelicula");
+
   $btnDestacar.onclick = () => {
-    prepararDestacada(pelicula.id, pelicula.titulo);
+    prepararDestacada(pelicula.id, pelicula.titulo, idActualDestacado);
+    $tdBotones.replaceChild($btnNoDestacar, $btnDestacar);
+  };
+  $btnNoDestacar.onclick = () => {
+    sessionStorage.removeItem("idPelicula");
+
+    $tdBotones.replaceChild($btnDestacar, $btnNoDestacar);
   };
 };
 
@@ -203,15 +228,23 @@ export const editarPelicula = (
 
   localStorage.setItem("peliculas", JSON.stringify(peliculas));
   sessionStorage.removeItem("idPelicula");
+  const $alert = document.getElementById("alert-pelicula-editando");
+  const $spanContacto = document.getElementById("nombre-pelicula-editando");
+  $alert.remove();
+  $spanContacto.remove();
 };
-const prepararDestacada = (idPelicula, tituloPelicula) => {
+const prepararDestacada = (idPelicula, tituloPelicula, idActualDestacado) => {
   sessionStorage.removeItem("idPelicula");
   sessionStorage.setItem("idPelicula", idPelicula);
-  console.log(idPelicula);
+  const peliculas = obtenerPeliculasLs();
+  const peliculaDestacadaAnterior = peliculas.find(
+    (p) => p.id === idActualDestacado
+  );
+  
 
   swal.fire({
     title: "Exito",
-    text: `${tituloPelicula} ha sido destacada correctamente?`,
+    text: `${tituloPelicula} ha sido destacada correctamente`,
     icon: "success",
     showConfirmButton: true,
     confirmButtonText: "Ok",

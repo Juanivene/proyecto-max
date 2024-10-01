@@ -30,16 +30,26 @@
         </div>
 
         <div class="links_der">
+          <div class="buscador">
+            <a href="buscador.html" id="buscar" aria-label="Buscar">
+              <img
+                src="https://images.cdn.prd.api.discomax.com/2023%2F4%2F14%2F142d5e2b-0c8d-4886-8617-f9f58acfb4b8.png"
+                alt="lupa"
+              />
+            </a>
+          </div>
           <div class="admin_logout">
             <a href="admin.html" id="admin">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png"
+                id="admin-img"
+                src="https://static.vecteezy.com/system/resources/thumbnails/019/879/186/small_2x/user-icon-on-transparent-background-free-png.png"
                 alt="user"
               />
             </a>
             <a href="index.html"
               ><img
-                src="https://w7.pngwing.com/pngs/49/357/png-transparent-logging-out-log-off-logout.png"
+                id="logout-img"
+                src="https://www.freeiconspng.com/thumbs/sign-out-icon/sign-out-logout-icon-0.png"
                 alt="cerrar sesion"
             /></a>
           </div>
@@ -110,10 +120,10 @@
           </fieldset>
 
           <fieldset class="mb-2">
-            <label for="link_trailer">Link del Tráiler (YouTube):</label>
-            <input type="url" id="link_trailer" class="form-control" />
+            <label for="link_trailer">Id del trailer (YouTube):</label>
+            <input type="text" id="link_trailer" class="form-control" />
             <div class="invalid-feedback">
-              <span class="badge text-bg-danger">La url no es valida</span>
+              <span class="badge text-bg-danger">Id no valida</span>
             </div>
           </fieldset>
 
@@ -137,7 +147,7 @@
     </main>
     <footer>
       <div>
-        <a href="https://www.instagram.com">
+        <a href="https://www.instagram.com/juanivenezianor/">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
             alt="Instagram"
@@ -145,7 +155,7 @@
             height="24"
           />
         </a>
-        <a href="https://www.twitter.com">
+        <a href="https://x.com/juaniveneziano_">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
             alt="Twitter"
@@ -153,7 +163,7 @@
             height="24"
           />
         </a>
-        <a href="https://www.github.com">
+        <a href="https://github.com/Juanivene">
           <img
             src="https://logowik.com/content/uploads/images/github-colored9940.logowik.com.webp"
             alt="GitHub"
@@ -169,6 +179,5 @@
 
     <script type="module" src="./js/admin/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
   </body>
 </html>

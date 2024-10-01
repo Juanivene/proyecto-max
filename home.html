@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
     <link
       rel="shortcut icon"
       href="https://www.max.com/favicon.ico"
@@ -33,29 +34,30 @@
           <a href="#cat_humor">Humor</a>
           <a href="#cat_terror">Terror</a>
           <a href="#cat_clasicos">Clásicos</a>
-          <a href="#cat_nuevo">Nuevo</a>
+          <a href="#cat_recomendaciones">Recomendaciones</a>
         </div>
 
         <div class="links_der">
           <div class="buscador">
-            <input type="text" placeholder="Buscar..." id="search-input" />
-            <button id="buscar" aria-label="Buscar">
+            <a href="buscador.html" id="buscar" aria-label="Buscar">
               <img
-                src="https://w7.pngwing.com/pngs/321/177/png-transparent-computer-icons-magnifier-magnifying-glass-magnifying-glass-text-share-icon-magnifier-thumbnail.png"
+                src="https://images.cdn.prd.api.discomax.com/2023%2F4%2F14%2F142d5e2b-0c8d-4886-8617-f9f58acfb4b8.png"
                 alt="lupa"
               />
-            </button>
+            </a>
           </div>
           <div class="admin_logout">
             <a href="admin.html" id="admin">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png"
+                id="admin-img"
+                src="https://static.vecteezy.com/system/resources/thumbnails/019/879/186/small_2x/user-icon-on-transparent-background-free-png.png"
                 alt="user"
               />
             </a>
             <a href="index.html"
               ><img
-                src="https://w7.pngwing.com/pngs/49/357/png-transparent-logging-out-log-off-logout.png"
+                id="logout-img"
+                src="https://www.freeiconspng.com/thumbs/sign-out-icon/sign-out-logout-icon-0.png"
                 alt="cerrar sesion"
             /></a>
           </div>
@@ -65,17 +67,16 @@
     <main>
       <section id="imagen_destacada">
         <img
-          src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2024/09/20/17268273276833.png"
-          alt="pinguino-portada"
+src="https://i.blogs.es/6348f0/1366_2000-43-/1366_2000.jpeg"          alt="pinguino-portada"
           class="destacada"
           id="destacada1"
         />
         <div class="navegacion_destacada">
-          <h3>
+          <h3 class="d-none">
             Tras la muerte de Carmine Falcone, Oz intenta legitimarse en el
             inframundo criminal de Ciudad Gótica.
           </h3>
-          <a href="pelicula.html">Ir a pelicula</a>
+          <a href="pelicula.html" class="d-none">Ir a pelicula</a>
         </div>
       </section>
       <section id="cat_recomendaciones" class="categorias">
@@ -114,7 +115,7 @@
     </main>
     <footer>
       <div>
-        <a href="https://www.instagram.com">
+        <a href="https://www.instagram.com/juanivenezianor/">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
             alt="Instagram"
@@ -122,7 +123,7 @@
             height="24"
           />
         </a>
-        <a href="https://www.twitter.com">
+        <a href="https://x.com/juaniveneziano_">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
             alt="Twitter"
@@ -130,7 +131,7 @@
             height="24"
           />
         </a>
-        <a href="https://www.github.com">
+        <a href="https://github.com/Juanivene">
           <img
             src="https://logowik.com/content/uploads/images/github-colored9940.logowik.com.webp"
             alt="GitHub"

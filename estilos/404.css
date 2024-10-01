@@ -1,0 +1,94 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #010408;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#centro_pagina {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgb(2, 2, 2) 21%,
+    rgb(9, 7, 71) 53%,
+    rgb(11, 23, 88) 71%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#titulos_centro_pagina {
+  color: white;
+}
+
+#titulos_centro_pagina h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ff6363;
+}
+
+#titulos_centro_pagina h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ff8c00;
+}
+
+#titulos_centro_pagina p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-volver {
+  background-color: rgba(19, 51, 194, 0.863);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #041227;
+  color: white;
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #05064e; /* Azul oscuro para mantener la temática */
+  color: #b3b3b3; /* Color claro para el texto */
+  padding: 20px 0; /* Espaciado superior e inferior */
+  text-align: center; /* Centrar el contenido */
+  /* Separación respecto al contenido superior */
+}
+
+footer div {
+  margin-bottom: 10px; /* Separación entre íconos y el texto */
+}
+
+footer a {
+  margin: 0 10px; /* Espaciado entre los íconos */
+  transition: transform 0.3s ease; /* Suave animación al pasar el ratón */
+}
+
+footer a:hover {
+  transform: scale(1.2); /* Aumenta el tamaño de los íconos al pasar el ratón */
+}
+
+footer p {
+  font-size: 0.9rem; /* Tamaño de texto un poco más pequeño */
+}

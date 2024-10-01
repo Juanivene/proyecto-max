@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#lw_header {
+  background-color: rgba(0, 0, 0, 0.7); /* Barra semi-transparente */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+#link_inicio img {
+  width: 120px;
+}
+
+#links_centro {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#links_centro a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+#links_centro a:hover {
+  color: #f0a500; /* Efecto hover con color de acento */
+}
+
+.links_der {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.links_der .buscador img,
+.links_der .admin_logout img {
+  width: 20px;
+  transition: transform 0.3s ease;
+}
+
+.links_der img:hover {
+  transform: scale(1.2); /* Animación al pasar el ratón */
+}
+
+#logout-img {
+  width: 25px;
+}
+
+#admin-img {
+  width: 30px;
+  margin-bottom: 2px;
+}
+main {
+  padding: 6rem 1rem; /* Espacio superior para el header + margen lateral */
+  background: linear-gradient(
+    180deg,
+    rgb(2, 2, 2) 21%,
+    rgb(9, 7, 71) 53%,
+    rgb(11, 23, 88) 71%
+  ); /* Degradado de fondo */
+  color: #ffffff; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+}
+
+.titulo {
+  font-size: 2rem; /* Tamaño de fuente más grande */
+  margin-bottom: 1.5rem; /* Espacio debajo del título */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra para el título */
+}
+
+.video {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 800px; /* Ancho máximo del iframe */
+  height: 450px; /* Altura fija para el iframe */
+  margin: 1.5rem 0; /* Espacio arriba y abajo del iframe */
+  border: none; /* Sin borde para el iframe */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.descripcion {
+  font-size: 1.2rem; /* Tamaño de fuente para el párrafo */
+  line-height: 1.6; /* Espaciado entre líneas */
+  max-width: 800px; /* Ancho máximo del párrafo */
+  margin: 0 auto; /* Centrar el párrafo */
+  padding: 0 1rem; /* Espacio lateral */
+}
+footer {
+  background-color: #05064e; /* Azul oscuro para mantener la temática */
+  color: #b3b3b3; /* Color claro para el texto */
+  padding: 20px 0; /* Espaciado superior e inferior */
+  text-align: center; /* Centrar el contenido */
+  /* Separación respecto al contenido superior */
+}
+
+footer div {
+  margin-bottom: 10px; /* Separación entre íconos y el texto */
+}
+
+footer a {
+  margin: 0 10px; /* Espaciado entre los íconos */
+  transition: transform 0.3s ease; /* Suave animación al pasar el ratón */
+}
+
+footer a:hover {
+  transform: scale(1.2); /* Aumenta el tamaño de los íconos al pasar el ratón */
+}
+
+footer p {
+  font-size: 0.9rem; /* Tamaño de texto un poco más pequeño */
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 6.5rem; /* Menos padding en pantallas más pequeñas */
+  }
+
+  .titulo {
+    font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+    margin-bottom: 1rem; /* Menos margen */
+  }
+
+  .video {
+    width: 480px; /* Altura más pequeña para pantallas pequeñas */
+  }
+
+  .descripcion {
+    font-size: 1rem; /* Tamaño de fuente más pequeño para descripción */
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 7.4rem 0.5rem; /* Menos padding en pantallas muy pequeñas */
+  }
+
+  .titulo {
+    font-size: 1.3rem; /* Tamaño de fuente aún más pequeño */
+    margin-bottom: 0.8rem; /* Ajuste de margen */
+  }
+
+  .video {
+    width: 380px; /* Altura más pequeña para pantallas pequeñas */
+  }
+
+  .descripcion {
+    font-size: 0.9rem; /* Tamaño de fuente aún más pequeño para descripción */
+  }
+}

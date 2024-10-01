@@ -5,78 +5,60 @@
 }
 
 #lw_header {
-  background-color: #000000b4;
-  display: flex; /* Usar flexbox */
-  align-items: center; /* Centrar verticalmente */
+  background-color: rgba(0, 0, 0, 0.7); /* Barra semi-transparente */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
   padding: 1rem;
-  position: fixed; /* Fija la barra de navegación */
-
-  width: 100%; /* Asegúrate de que ocupe todo el ancho */
-  z-index: 1000; /* Mantiene la barra por encima de otros elementos */
-}
-
-#link_inicio {
-  margin-left: 2rem;
-  margin-right: auto;
+  z-index: 1000;
 }
 
 #link_inicio img {
-  width: 110px;
+  width: 120px;
 }
-.links_der a img {
-  width: 30px;
-  margin-right: 1rem;
-  padding-right: 0px;
-}
+
 #links_centro {
-  flex: 1; /* Permite que el contenedor de los enlaces ocupe el espacio central */
   display: flex;
-  justify-content: center; /* Centra horizontalmente los enlaces */
-  gap: 10px;
+  justify-content: center;
+  gap: 2rem;
 }
 
 #links_centro a {
-  text-decoration: none;
-  font-family: "Arial", sans-serif;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.25s ease;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
+
 #links_centro a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  color: #f0a500; /* Efecto hover con color de acento */
 }
 
-.buscador {
+.links_der {
   display: flex;
-  align-items: center; /* Centrar verticalmente */
+  align-items: center;
+  gap: 1rem;
 }
 
-#search-input {
-  border: 1px solid #ddd; /* Bordes del input */
-  border-radius: 5px; /* Bordes redondeados */
-  margin-right: 0px; /* Espacio entre el input y el botón */
-  font-size: 16px; /* Tamaño de fuente */
-  padding-right: 10px;
+.links_der .buscador img,
+.links_der .admin_logout img {
+  width: 20px;
+  transition: transform 0.3s ease;
 }
 
-#buscar {
-  background: none; /* Sin fondo */
-  border: none; /* Sin borde */
-  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+.links_der img:hover {
+  transform: scale(1.2); /* Animación al pasar el ratón */
 }
 
-#buscar img {
-  margin-right: -40px;
-  width: 24px; /* Tamaño del ícono */
-  height: 24px; /* Tamaño del ícono */
+#logout-img {
+  width: 25px;
 }
 
-#buscar:hover img {
-  filter: brightness(0.8); /* Oscurecer el ícono al pasar el mouse */
-}
-.admin_logout {
-  padding-left: 7.7rem;
+#admin-img {
+  width: 30px;
+  margin-bottom: 2px;
 }
 
 main {
@@ -172,70 +154,18 @@ footer a:hover {
 footer p {
   font-size: 0.9rem; /* Tamaño de texto un poco más pequeño */
 }
-@media (max-width: 768px) {
-  #lw_header {
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-
-  #link_inicio {
-    margin-left: 0;
-    margin-bottom: 1rem;
-  }
-
-  #links_centro {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  #links_centro a {
-    padding: 5px 10px;
-  }
-
-  .buscador {
-    justify-content: center;
-  }
-
-  #search-input {
-    font-size: 14px;
-    padding-right: 5px;
-  }
-
-  .admin_logout {
-    padding-left: 0;
-    text-align: center;
-    margin-top: 1rem;
-  }
-}
 
 @media (max-width: 480px) {
-  #link_inicio img {
-    width: 90px;
-  }
-
-  .links_der a img {
-    width: 20px;
-    margin-right: 0.5rem;
-  }
-
-  #links_centro a {
-    font-size: 14px;
-    padding: 5px;
-  }
-
+  
   #formulario_agregar {
     width: 90%;
     padding: 10px;
   }
-
-  button {
-    font-size: 14px;
-    padding: 8px;
+  #buscar img{
+    width: 19px;
   }
 
-  footer p {
-    font-size: 0.8rem;
-  }
+
 }
 /* Estilo básico de la tabla */
 #tabla-carga {
@@ -243,7 +173,7 @@ footer p {
   border-collapse: collapse;
 }
 
-#tabla-carga th, 
+#tabla-carga th,
 #tabla-carga td {
   text-align: left;
   padding: 8px;
@@ -257,42 +187,12 @@ footer p {
 
 /* Hacer la tabla responsive para pantallas pequeñas */
 @media (max-width: 768px) {
-  #tabla-carga, 
-  #tabla-carga thead, 
-  #tabla-carga tbody, 
-  #tabla-carga th, 
-  #tabla-carga td, 
+  #tabla-carga,
+  #tabla-carga thead,
+  #tabla-carga tbody,
+  #tabla-carga th,
+  #tabla-carga td,
   #tabla-carga tr {
     display: block;
-  }
-
-  /* Ocultar los encabezados de la tabla en móviles */
-  #tabla-carga thead tr {
-    display: none;
-  }
-
-  /* Mostrar cada fila como un bloque separado */
-  #tabla-carga tbody tr {
-    margin-bottom: 15px;
-    border-bottom: 2px solid #444;
-    padding-bottom: 10px;
-  }
-
-  /* Mostrar cada celda como un bloque, con su encabezado correspondiente */
-  #tabla-carga td {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #444;
-    background-color: #1a1a1a;
-  }
-
-  /* Insertar el nombre del encabezado antes del contenido de cada celda */
-  #tabla-carga td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #f0f0f0;
   }
 }

@@ -14,7 +14,6 @@
   left: 0; /* Alinea la barra a la izquierda */
   width: 100%; /* Asegúrate de que ocupe todo el ancho */
   z-index: 1000; /* Mantiene la barra por encima de otros elementos */
-  
 }
 
 #link_inicio {
@@ -41,8 +40,8 @@
 
 .links_der a:hover,
 .link_suscribete_ahora:hover {
-  background-color: #041227; 
-  color: white; 
+  background-color: #041227;
+  color: white;
   transition: 0.3s;
 }
 
@@ -70,7 +69,6 @@
   margin-bottom: 20px; /* Ajusta el valor según necesites */
 }
 
-
 #planes_pagina {
   background: linear-gradient(
     180deg,
@@ -80,6 +78,7 @@
   );
   color: #ffff;
   text-align: center;
+  padding-top: 1rem;
 }
 #planes_pagina button {
   background-color: rgba(19, 51, 194, 0.863); /* Color de fondo */
@@ -157,7 +156,6 @@
   padding-top: 50px;
   color: #ffff;
   padding-bottom: 50px;
-  
 }
 .estrenos {
   display: flex;
@@ -165,6 +163,7 @@
   flex-wrap: wrap; /* Para que las tarjetas se ajusten a la pantalla */
   gap: 20px; /* Espacio entre las tarjetas */
   margin-bottom: 20px;
+  padding-top: 1rem;
 }
 
 .estreno {
@@ -176,7 +175,7 @@
   ); /* Fondo ligero para las tarjetas */
   border-radius: 10px; /* Esquinas redondeadas */
   padding: 10px;
-  width: 200px; /* Ancho fijo para las tarjetas */
+  width: 170px; /* Ancho fijo para las tarjetas */
 }
 
 .estreno img {
