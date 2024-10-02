@@ -5,7 +5,8 @@ export class Pelicula {
     descripcion,
     fotoCaratula,
     fotoPortada,
-    linkTrailer
+    linkTrailer,
+    
   ) {
     this.id = window.self.crypto.randomUUID();
     this.titulo = titulo;
@@ -14,5 +15,6 @@ export class Pelicula {
     this.fotoCaratula = fotoCaratula;
     this.fotoPortada = fotoPortada;
     this.linkTrailer = linkTrailer;
+    
   }
 }

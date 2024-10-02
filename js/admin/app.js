@@ -44,6 +44,7 @@ $formAgregarPelicula.addEventListener("submit", (e) => {
   let fotoCaratula = $inputFotoCaratula.value;
   let fotoPortada = $inputFotoPortada.value;
   let trailer = $inputTrailer.value;
+  
 
   if (
     !validateTitulo($inputTitulo) ||
@@ -72,6 +73,7 @@ $formAgregarPelicula.addEventListener("submit", (e) => {
         fotoCaratula,
         fotoPortada,
         trailer
+        
       );
     }
 
