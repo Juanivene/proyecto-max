@@ -77,23 +77,32 @@ const cargarFilaTabla = (pelicula, indice) => {
   //botones
   const $tdBotones = document.createElement("td");
 
+  const $btnNoDestacar = document.createElement("button");
   const $btnDestacar = document.createElement("button");
   const $btnEditar = document.createElement("button");
   const $btnEliminar = document.createElement("button");
-
-  $btnDestacar.classList.add("btn", "btn-sm", "btn-info", "mb-1");
-  $btnEditar.classList.add("btn", "btn-sm", "btn-warning", "mb-1");
-  $btnEliminar.classList.add("btn", "btn-sm", "btn-danger");
-
+  $btnNoDestacar.classList.add(
+    "btn",
+    "btn-sm",
+    "btn-info",
+    "mb-1",
+    "btn-tabla"
+  );
+  $btnDestacar.classList.add("btn", "btn-sm", "btn-info", "mb-1", "btn-tabla");
+  $btnEditar.classList.add("btn", "btn-sm", "btn-warning", "mb-1", "btn-tabla");
+  $btnEliminar.classList.add("btn", "btn-sm", "btn-danger", "btn-tabla");
+  $btnNoDestacar.textContent = "No destacar";
   $btnDestacar.textContent = "Destacar";
   $btnEditar.textContent = "Editar";
   $btnEliminar.textContent = "Eliminar";
 
   const idEnSs = sessionStorage.getItem("idPelicula");
 
- 
+  if (pelicula.id === idEnSs) {
+    $tdBotones.appendChild($btnNoDestacar);
+  } else {
     $tdBotones.appendChild($btnDestacar);
- 
+  }
 
   $tdBotones.appendChild($btnEditar);
   $tdBotones.appendChild($btnEliminar);
@@ -110,13 +119,17 @@ const cargarFilaTabla = (pelicula, indice) => {
   };
   $btnDestacar.onclick = () => {
     prepararDestacada(pelicula.id, pelicula.titulo);
- 
+    $tdBotones.replaceChild($btnNoDestacar, $btnDestacar);
+  };
+
+  $btnNoDestacar.onclick = () => {
+    $tdBotones.replaceChild($btnDestacar, $btnNoDestacar);
+    sessionStorage.removeItem("idPelicula");
   };
 };
 
 export const cargarTabla = () => {
   const peliculas = obtenerPeliculasLs();
-
 
   const $tbody = document.getElementById("tbody-peliculas");
   $tbody.innerHTML = "";
